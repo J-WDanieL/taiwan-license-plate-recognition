@@ -44,6 +44,35 @@ Template Matching (>99% pixel similarity threshold)
 Output: "ABC-1234"
 ```
 
+## Pipeline Visualization
+
+<table>
+  <tr>
+    <td align="center"><b>① Original Input</b></td>
+    <td align="center"><b>② Grayscale + Gaussian Blur</b></td>
+    <td align="center"><b>③ Sobel Edge Detection</b></td>
+    <td align="center"><b>④ Binary Threshold</b></td>
+  </tr>
+  <tr>
+    <td><img src="docs/images/0.input_image.jpg" alt="Original Input" width="220"/></td>
+    <td><img src="docs/images/1.roi_gray_blur.jpg" alt="Gaussian Blur" width="220"/></td>
+    <td><img src="docs/images/2.sobel.jpg" alt="Sobel Edge Detection" width="220"/></td>
+    <td><img src="docs/images/3.binary.jpg" alt="Binary Threshold" width="220"/></td>
+  </tr>
+  <tr>
+    <td align="center"><b>⑤ Morphological Dilation/Erosion</b></td>
+    <td align="center"><b>⑥ Plate Crop</b></td>
+    <td align="center"><b>⑦ Character Segmentation</b></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td><img src="docs/images/4.morphological.jpg" alt="Morphological Operations" width="220"/></td>
+    <td><img src="docs/images/5.plate.jpg" alt="Plate Crop" width="220"/></td>
+    <td><img src="docs/images/6.character.jpg" alt="Character Segmentation" width="220"/></td>
+    <td></td>
+  </tr>
+</table>
+
 ## Requirements
 
 - Python 3.7+
